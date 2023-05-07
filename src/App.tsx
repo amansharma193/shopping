@@ -1,25 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
+import {useState} from 'react';
 import './App.css';
+import NavbarFixed from './Navbar';
+import ProductList from './ProductList';
+import Cart from './Cart';
 
 function App() {
+  const [searchText, setSearchText] = useState("");
+  const [cartToggle, setCartToggle] = useState(false);
+  const [cartData, setCartData] = useState([]);
+  const onInputChange = (value:string) => {
+    setSearchText(value);
+  }
   return (
+    <>
+    <NavbarFixed onInputChange={onInputChange} setCartToggle={setCartToggle} />
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <ProductList data={{cartData,setCartData,searchText}} />
+        {cartToggle && <Cart data={{cartData,setCartData}} /> }
       </header>
     </div>
+    </>
   );
 }
 

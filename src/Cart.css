@@ -1,0 +1,70 @@
+.image{
+  height: 24px;
+  width: 24px;
+  display: inline-block;
+}
+
+.image img{
+  width: inherit;
+  height: inherit;
+}
+
+.productContainer{
+  display: flex;
+  margin: 10px 10px;
+}
+
+.name{
+  font-size: 16px;
+  font-weight: bold;
+  margin: auto 10px;
+  display: inline-block;
+  width: 34%;
+  word-wrap: break-word;
+    white-space: nowrap;
+}
+
+.price{
+  display: inline-block;
+  margin: auto 0px;
+  font-size: 12px;
+}
+
+.quantity{
+  display: inline-block;
+  cursor: pointer;
+}
+
+.quantityBtn, .removeBtn{
+  display: inline-block;
+  color: white;
+  border-radius: 5px;
+  background: rgb(204,0,0);
+  text-align: center;
+  padding: 0px 6px;
+  font-weight: bold;
+  margin: 0px 5px;
+  cursor: pointer;
+}
+
+.checkoutBtn{
+  width: inherit;
+  border-radius: 5px;
+  border: none;
+  background: rgb(204,0,0);
+  color: white;
+  font-weight: bold;
+  padding: 5px;
+  margin: 0px 10px;
+}
+
+.addressInput{
+  border-radius: 5px;
+  border: solid 1px grey;
+  padding: 5px;
+  margin: 5px 10px;
+}
+
+.cartHeader{
+  text-align: center;
+}
